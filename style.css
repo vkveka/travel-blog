@@ -1,0 +1,712 @@
+*{
+    margin:0;
+}
+
+body {
+    font-family: 'RocknRoll One', sans-serif;
+    display: grid;
+    grid-template: 61vh auto 140vh auto 90vh auto 25vh / repeat(3, 1fr);
+    grid-template-areas: 
+        "header header header"
+        "navbar navbar navbar"
+        "sectiontemple sectiontemple sectiontemple"
+        "lespluspopulaires colonneblanche colonneblanche"
+        "avion avion avion"
+        "basbleu basbleu basbleu"
+        "contact contact contact";
+}
+
+/* ******************* Parasol + Navbar + Temple **************** */
+
+
+header {
+    background: url(images/beach.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: header;
+}
+
+nav {
+    background-color: #f2f7ba;
+    grid-area: navbar;
+    font-size: 1vw;
+    padding: 1vw;
+}
+
+nav .texteparasol {
+    display: none;
+}
+
+#navigationLinks {
+    display: flex;
+    justify-content: space-around;
+}
+
+#hamburger {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b80b9;
+}
+
+#imgtemple {
+    grid-area: sectiontemple;
+    display: grid;
+    grid-template-columns: 5vw repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background: url(images/bali.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment:  fixed;
+    z-index: -1;
+}
+
+.texteparasol {
+    color: white;
+}
+
+
+
+#imgparasol {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 11vw;
+    color: white;
+    font-size: 1.2vw;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* ******************** Article Bali ******************** */
+
+
+#articlebali {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: #2b80b9;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    color: white;
+}
+
+#la_une {
+    margin-top: 1vw;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+.textebali {
+    text-align: center;
+    margin-top: 1vw;   
+}
+
+.photoemilie {
+    width: 3vw;
+    border-radius: 3vw;
+}
+
+#auteurbali {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    column-gap: 1vw;
+    margin: 1.5vw 0vw 0.5vw 0vw;
+}
+
+button {
+    background-color: #f2f7ba;
+    border-radius: 0.5vw;
+    width: auto;
+    height: 2.5vw;
+    color: #2b80b9;
+    font-size: 1.2em;
+    transition: 0.3s;
+    margin-top: 0.5vw;
+}
+
+button:hover {
+    color: #f2f7ba;
+    background-color: #2b80b9;
+    transition: 0.3s;
+}
+
+/* ****************** Colonnes Plus Populaires ******************** */
+
+
+#lespluspopulaires {
+    grid-area: lespluspopulaires;
+    background-color: #2b80b9;
+    text-align: center;
+}
+
+#hautdespopulaires p {
+    font-size: 1.3em;
+}
+
+#hautdespopulaires i {
+    margin-bottom: 1vw;
+}
+
+#hautdespopulaires {
+    color: white;
+    margin: 0vw 0vw 1vw 0vw;
+}
+
+
+
+#santorini, #miami, #losangeles, #maldives, #toronto {
+    height: auto;
+    width: auto;
+    border: 1px solid #f2f7ba;
+    margin: auto 2vw auto 2vw;
+    box-shadow: 0.3vw 0.3vw 0.5vw #f2f7ba;
+    border-radius: 1vw;
+    padding: 0vw 5vw 1vw 5vw;
+    color: white;
+    text-align: center;
+}
+
+
+
+.note {
+    display: flex;
+    column-gap: 0.5vw;
+    font-size: 1.3em
+}
+
+.note i {
+    margin-top: 0.3vw;
+}
+
+#top1, #top2, #top3, #top4, #top5 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5vw;
+    font-size: 1.3em;
+}
+
+.tete{
+    border-radius: 2vw;
+    width: 3vw;
+}
+
+.auteurpop {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5vw;
+    font-style: italic;
+    font-size: 0.75em;
+    margin: 1vw 0vw 1vw 0vw;
+}
+
+.coverpop {
+    width: 22vw;
+    border: 2px solid white;
+    margin-bottom: 1vw
+}
+
+#classement {
+    width: 12vw;
+    margin: 1.5vw;
+}
+
+
+/* ******************** DERNIERS ARTICLES ***************** */
+
+
+#colonneblanche {
+    grid-area: colonneblanche;
+    background-color: white;
+}
+
+#derniersarticles {
+    border-bottom: 1px solid #2b80b9;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        ". titreDA ."
+        "montrealDA sydneyDA rioDA"
+        ". boutonDA .";
+    margin: 0vw 10vw 2vw 10vw;
+    
+}
+
+#titreDA {
+    grid-area: titreDA;
+    justify-self: center;
+    color: #2b80b9;
+    text-align: center;
+    font-size: 1.3em;
+    border-bottom: 2px solid #f2f7ba;
+}
+
+#titreDA p {
+    margin-bottom: 1vw;
+}
+
+#titreDA i {
+    margin: 1vw;
+}
+
+#montrealDA {
+    grid-area: montrealDA;
+}
+
+#sydneyDA {
+    grid-area: sydneyDA;
+}
+
+#rioDA {
+    grid-area: rioDA;
+}
+
+#buttonDA {
+    grid-area: boutonDA;
+    justify-self: center;
+    margin-bottom: 1vw;
+    width: 10vw;
+    height: auto;
+}
+
+#derniersarticles img {
+    width: 13vw;
+    height: 17vh;
+    margin: 2vw 0vw 2vw 0vw;
+    justify-self: center;
+}
+
+
+/* ***************** ARTICLES SUR LES VILLES **************** */
+
+
+#montreal, #sydney, #rio {
+    border-bottom: 2px solid #2b80b9;
+    margin: 0vw 10vw 1vw 10vw;
+    text-align: center;
+    padding: 1.5vw;
+}
+
+
+.auteur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1vw;
+}
+
+.auteur i {
+    color: #2b80b9;
+}
+
+.imgarticles {
+    width: 35vw;
+}
+
+h2 {
+    border-bottom: 2px solid #f2f7ba;
+    margin: 0vw 15vw 0vw 15vw;
+    color: #2b80b9;
+    font-size: 1.5vw;
+}
+
+.texteville {
+    margin:2vw;
+}
+
+.auteur p {
+    font-style: italic;
+}
+
+.auteur {
+    margin: 1vw;
+}
+
+
+/* ****************** FOOTER ****************** */
+
+        /* *********AVION*********** */
+#avion {
+    background: url(images/plane.jpg);
+    grid-area: avion;
+    background-position: center;
+    background-size: cover;
+    color: #2b80b9;
+    text-align: center;
+    width: 100vw;
+}
+
+#avion p {
+    color: white;
+    margin-top: 2vw;
+}
+
+#avion i {
+    margin: 2vw;
+}
+
+#avion h3 {
+    border-bottom: 2px solid #f2f7ba;
+    margin: 0vw 45vw 0vw 45vw;
+}
+
+    /* ********TERRE********* */
+
+
+#basbleu {
+    grid-area: basbleu;
+    background-color: #2b80b9;
+}
+
+
+#basbleu img {
+    width: 10vw;
+}
+
+
+#terre {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#terre1, #terre2, #terre3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: 1.2s;
+}
+
+#terre1 img:hover, #terre2 img:hover, #terre3 img:hover {
+    transform: scale(1.2);
+    transition: 1.2s;
+}
+
+
+#contact i {
+    color: #2b80b9;
+    transition: 0.5s;
+}
+
+#contact p {
+    margin: 1vw;
+    color: #2b80b9;
+}
+
+#contact {
+    background-color: #f2f7ba;
+    grid-area: contact;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact i:hover {
+    color: white;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+
+
+
+
+/* ******MEDIA QUERIES****** */
+
+
+
+/* *************** TABLETTE ************* */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+
+    body {
+        grid-template: 50vh 100vh auto 55vh auto 25vh/ repeat(2, 1fr);
+        grid-template-areas: 
+            "header header "
+            "sectiontemple sectiontemple "
+            "lespluspopulaires colonneblanche "
+            "avion avion "
+            "basbleu basbleu "
+            "contact contact ";
+    }
+
+    #articlebali {
+        margin: 0vw 4vw 8vw 8vw;
+    }
+
+    button {
+        width: 20vw;
+        height: 6vh;
+    }
+  
+    header .texteparasol {
+        font-size: 2vw
+    }
+    
+    #imgparasol p {
+        font-size: 3vw;
+    }
+
+    #navigationLinks {
+        margin-top: 2vw;
+        font-size: 2em;
+    }
+    
+    .coverpop {
+        width: 30vw;
+    }
+
+    #derniersarticles img {
+        width: 30vw;
+        height: auto;
+    }
+
+    #montreal, #sydney, #rio {
+        margin: 0vw 0vw 2vw 0vw;
+    }
+
+    .imgarticles {
+        width: 40vw;
+    }
+
+    #lespluspopulaires p {
+        font-size: 2vw;
+    }    
+
+    .tete {
+        width: 5vw;
+    }
+
+    .auteurpop {
+        column-gap: 1vw;
+    }
+}
+
+
+
+/* ************** MOBILE ET TABLETTES ****************** */
+
+
+@media screen and (max-width: 991px) {
+
+    header {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        font-size: 0.5em;
+    }
+
+    nav .texteparasol {
+        display: flex;
+        align-items: center;
+        column-gap: 1vw;
+        color: #2b80b9;
+        margin-right: 25%;
+    }
+
+    #hamburgerTitre {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #hamburger {
+        display: block;
+        color: #2b80b9;
+        margin-left: 2vw;
+    }
+
+    #santorini, #miami, #losangeles, #maldives, #toronto {
+        padding: 1vw 2vw 1vw 2vw;
+        margin: 4vw;
+        height: auto;
+        border-radius: 3vw;
+    }
+
+    #classement {
+        width: 30vw;
+    }
+
+    #avion h3 {
+        margin: 0vw 0vw 0vw 0vw;
+    }
+
+    #derniersarticles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0vw 0vw 2vw 0vw;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ************ Téléphone *********** */
+
+@media screen and (max-width: 770px) {
+    
+
+    body {
+        grid-template: 40vh 80vh auto auto 40vh auto 15vh / 1fr;
+        grid-template-areas: 
+            "header"
+            "sectiontemple"            
+            "colonneblanche"
+            "lespluspopulaires"
+            "avion"
+            "basbleu"
+            "contact" ;
+
+    }
+
+    nav {
+        position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        font-size: 0.5em;
+    }
+
+    #imgparasol .texteparasol {
+        font-size: 2.5vw;
+    }
+
+    nav .texteparasol {
+        margin-right: 10%;
+    }
+
+    nav h1 {
+        font-size: 4em;
+    }
+
+    #hamburgerTitre i {
+        font-size: 4em;
+    }
+
+    #imgparasol p {
+        font-size: 4vw;
+    }
+
+    #navigationLinks {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 5vw;
+    }
+
+    #imgtemple {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #derniersarticles {
+        margin-top: 3vw;
+    }
+
+    #derniersarticles img {
+        width: 70vw;
+        height: auto;
+    }
+
+    .imgarticles {
+        width: 70vw;
+        height: auto;
+    }
+
+    button, #buttonDA {
+        width: 30vw;
+        height: auto;
+        margin: 3vw;
+        align-self: center;
+    }
+
+    .auteur img {
+        width: 15vw;
+    }
+
+    .auteur {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #santorini, #miami, #losangeles, #maldives, #toronto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .coverpop  {
+        width: 80vw;
+        align-self: center;
+        margin-top: 2vw;
+    }
+
+    .auteurpop {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vw;
+    }
+
+    .tete {
+        width: 15vw;
+        border-radius: 10vw;
+    }
+
+    #colonneblanche h2 {
+        font-size: 1.5em;
+    }
+
+    
+
+    #avion {
+        text-align: center;
+    }
+
+    #avion h3 {
+        font-size: 1.5em;
+    }
+
+    #avion p {
+        margin: 3vw 5vw 0vw 5vw;
+    }
+
+    #terre {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #terre img {
+        width: 40vw;
+    }   
+}
